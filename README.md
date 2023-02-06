@@ -92,7 +92,7 @@ Let's commercialize the this into modern EDR solution. Today's modern EDR soluti
 2. https://ebpf.io/
 3. https://github.com/brendangregg
 
-Big Thanks to Hal Pomeranz for great explanation with Antisyphon and Spyderbat.
+**Big Thanks to Hal Pomeranz for great explanation with Antisyphon and Spyderbat**
 
 
 
