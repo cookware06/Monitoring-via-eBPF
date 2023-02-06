@@ -82,7 +82,7 @@ Here we have used syscalls as "sys_enter_execve", but you can also try with othe
 
 ![image](https://user-images.githubusercontent.com/123907103/216854706-90376833-4b0e-497c-81b4-453cbaef938c.png)
 
-Also, the file under the /sys/kernel/debug/tracing/events/syscalls/[syscalls]/ has named "format" where you can see the field names.
+Also, the file under the /sys/kernel/debug/tracing/events/syscalls/[syscalls]/ has named "format" where you can see the available field names which can be used to define further while tracing a call.
 
 Let's commercialize the this into modern EDR solution. Today's modern EDR solution are relying these basic monitoring procedure which makes them to watch each system call from a process execution.
 
