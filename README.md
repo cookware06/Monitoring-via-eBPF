@@ -1,4 +1,4 @@
-# Monitoring-via-eBPF
+# Monitoring via eBPF
 
 # Monitoring via eBPF (How modern EDR Solutions monitor every process execution)
 
