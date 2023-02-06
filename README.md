@@ -2,13 +2,13 @@
 
 # Monitoring via eBPF (How modern EDR Solutions monitor every process execution)
 
-Historically, Linux logging was entirely up to developers as what needs to logged and the formats of these logs. Logging was primarily done by using the **auditd** component.
+Historically, Linux logging was entirely up to developers as what needs to logged and the formats of logs. Logging was primarily done by using the **auditd** component.
 
 Recently, the late kernal version 3.15 was came up with eBPF. Let's dig why it was happened.
 
-Every Organizations needed to have mandatory logging in OS to see what's going in their OS via system call. Basically a kernel monitoring system, which monitor every system call such as user login, privilege escalation, scheduled tasks, system reboots, etc. Significant perfomance impact was noticed on strong monitoring strategy. Anything further than that such as File Access, Modification and Execution needed to mentioned using auditd.
+Every Organizations needed to have mandatory logging in OS to see what's going in their OS via system call. Basically a kernel monitoring system, which monitor every system call such as user login, privilege escalation, scheduled tasks, system reboots, etc. Significant perfomance impact was noticed on this strong monitoring strategy. Anything further than that such as File Access, Modification and Execution can also be mentioned using auditd.
 
-Later it became possible to monitor every single system call by a process execution using auditd. But the output format was complex as below.,
+Due to the perfomance impact the output format of these logging., it wasn't much appreciated., but widely used.
 
 ![image](https://user-images.githubusercontent.com/123907103/216847609-1b478074-6cce-4a20-aa9b-302210b5438c.png)
 
@@ -16,7 +16,7 @@ Looks busy, isn't it! It was harder to find meaning info from these log format.
 
 # How it's started
 
-In the beginning tcpdump was available across linux systems which uses a very simple VM in kernal space, that could watch the packets coming through the network stack and filter! User space was much empty as tcpdump was using space in kernel which shown a great results in terms of perfomance.
+In the beginning tcpdump, was available across linux systems which uses a very simple VM in kernal space, that could watch the packets coming through the network stack and filter it! User space was not much occupied as tcpdump was using space in kernel which has shown a great results in terms of perfomance.
 
 Later they've updated it to modern times as in the form of BPF (Berkeley Packet Filter - Developer(s): Steven McCanne, Van Jacobson). Initial idea was to replace network filter with BPF which provides a raw interface to data link layers, permitting raw link-layer packets to be sent and received., but they've generatized it in a broader sense and further lead to **eBPF (extended Berkeley Packet Filter)**.
 
@@ -28,7 +28,7 @@ eBPF is a revolutionary technology with origins in the Linux kernel that can run
 
 Reference: https://ebpf.io/
 
-As Hal pomeranz would say, it's a generic VM which is capable of filtering pretty much any system calls.
+As Hal pomeranz would say, it's a generic VM which is capable of filtering pretty much any system calls (not limited to).
 
 ![image](https://user-images.githubusercontent.com/123907103/216849000-f3353270-5d98-4dd6-b62d-587ae2526475.png)
 
