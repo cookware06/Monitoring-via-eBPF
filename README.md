@@ -8,7 +8,7 @@ Recently, the late kernal version 3.15 was came up with eBPF. Let's dig why it w
 
 Every Organizations needed to have mandatory logging in OS to see what's going in their OS via system call. Basically a kernel monitoring system, which monitor every system call such as user login, privilege escalation, scheduled tasks, system reboots, etc. Significant perfomance impact was noticed on this strong monitoring strategy. Anything further than that such as File Access, Modification and Execution can also be mentioned using auditd.
 
-Due to the perfomance impact the output format of these logging., it wasn't much appreciated., but widely used.
+Due to the  output formatting of these logging, perfomance was very much impacted. But widely used.
 
 ![image](https://user-images.githubusercontent.com/123907103/216847609-1b478074-6cce-4a20-aa9b-302210b5438c.png)
 
@@ -28,11 +28,11 @@ eBPF is a revolutionary technology with origins in the Linux kernel that can run
 
 Reference: https://ebpf.io/
 
-As Hal pomeranz would say, it's a generic VM which is capable of filtering pretty much any system calls (not limited to).
+Hal pomeranz said, it's a generic VM which is capable of filtering pretty much any system calls (not limited to).
 
 ![image](https://user-images.githubusercontent.com/123907103/216849000-f3353270-5d98-4dd6-b62d-587ae2526475.png)
 
-As it's more general, filtering language became so much more complex. It goes through multiple steps as shown above. Endleswis possibilities, and the innovation that eBPF is unlocked has only just begun.
+In general, filtering language became so much complex. It goes through multiple steps as shown above. With endless possibilities and the innovation that eBPF is unlocked has only just begun.
 
 **Let's use eBPF with BCC program**
 
